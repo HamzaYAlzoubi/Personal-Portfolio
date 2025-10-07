@@ -56,4 +56,115 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", onScroll);
   onScroll(); // Also run on load to set initial state
+
+  // --- Custom Lightbox Logic ---
+  const lightbox = document.getElementById('custom-lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxBackdrop = document.getElementById('lightbox-backdrop');
+  const thumbnailsContainer = document.getElementById('lightbox-thumbnails-container');
+  const closeButton = lightbox.querySelector('.lightbox-close');
+  const nextButton = lightbox.querySelector('.lightbox-next');
+  const prevButton = lightbox.querySelector('.lightbox-prev');
+  const projectItems = document.querySelectorAll('.project-item');
+
+  let galleryImages = [];
+  let currentImageIndex = 0;
+
+  const generateThumbnails = () => {
+    thumbnailsContainer.innerHTML = ''; // Clear old thumbnails
+    galleryImages.forEach((imageSrc, index) => {
+      const thumb = document.createElement('img');
+      thumb.src = imageSrc;
+      thumb.classList.add('thumbnail-image');
+      thumb.dataset.index = index;
+      // Add click listener to change image
+      thumb.addEventListener('click', (e) => {
+        currentImageIndex = parseInt(e.target.dataset.index);
+        updateLightboxImage();
+      });
+      thumbnailsContainer.appendChild(thumb);
+    });
+  };
+
+  const openLightbox = (images, index) => {
+    galleryImages = images;
+    currentImageIndex = index;
+    generateThumbnails();
+    updateLightboxImage();
+    lightbox.classList.add('visible');
+    lightbox.classList.remove('hidden');
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('visible');
+    lightbox.classList.add('hidden');
+  };
+
+  const updateLightboxImage = () => {
+    // Update main image
+    if (galleryImages.length > 0) {
+      lightboxImage.src = galleryImages[currentImageIndex];
+    }
+
+    // Update thumbnails active state
+    const thumbnails = thumbnailsContainer.querySelectorAll('.thumbnail-image');
+    thumbnails.forEach(thumb => {
+      if (parseInt(thumb.dataset.index) === currentImageIndex) {
+        thumb.classList.add('active');
+        // Scroll the active thumbnail into view
+        thumb.scrollIntoView({
+          behavior: 'smooth',
+          inline: 'center',
+          block: 'nearest'
+        });
+      } else {
+        thumb.classList.remove('active');
+      }
+    });
+
+    // Hide/show arrows and thumbnails if only one image
+    const navigationVisible = galleryImages.length > 1;
+    nextButton.style.display = navigationVisible ? 'block' : 'none';
+    prevButton.style.display = navigationVisible ? 'block' : 'none';
+    thumbnailsContainer.style.display = navigationVisible ? 'block' : 'none';
+  };
+
+  const showNextImage = () => {
+    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+    updateLightboxImage();
+  };
+
+  const showPrevImage = () => {
+    currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+    updateLightboxImage();
+  };
+
+  projectItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const imagesAttr = item.dataset.galleryImages;
+      if (imagesAttr) {
+        const images = imagesAttr.split(',').map(s => s.trim());
+        if (images.length > 0) {
+          openLightbox(images, 0);
+        }
+      }
+    });
+  });
+
+  closeButton.addEventListener('click', closeLightbox);
+  lightboxBackdrop.addEventListener('click', closeLightbox);
+  nextButton.addEventListener('click', showNextImage);
+  prevButton.addEventListener('click', showPrevImage);
+
+  window.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('visible')) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'ArrowRight') {
+        showNextImage();
+      } else if (e.key === 'ArrowLeft') {
+        showPrevImage();
+      }
+    }
+  });
 });

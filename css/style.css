@@ -79,3 +79,59 @@ body {
 .animate-blob {
   animation: blob 7s infinite;
 }
+
+/* Style for project items to indicate they are clickable */
+.project-item a {
+  cursor: pointer;
+}
+
+/* --- Custom Lightbox Styles --- */
+#custom-lightbox.visible {
+  display: flex; /* Use flex to easily center the content */
+}
+
+.lightbox-close, .lightbox-prev, .lightbox-next {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+#custom-lightbox img {
+  animation: lightbox-fade-in 0.5s ease;
+}
+
+@keyframes lightbox-fade-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* --- Thumbnail Styles --- */
+#lightbox-thumbnails-container {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.thumbnail-image {
+  display: inline-block;
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease, opacity 0.3s ease;
+  opacity: 0.6;
+}
+
+.thumbnail-image:hover {
+  opacity: 1;
+}
+
+.thumbnail-image.active {
+  border-color: var(--primary-color, #8b5cf6);
+  opacity: 1;
+}

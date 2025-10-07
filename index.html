@@ -589,114 +589,55 @@
               Here are a few projects I've worked on recently.
             </p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project 1 Placeholder -->
-            <div
-              class="bg-background/50 border border-border rounded-2xl overflow-hidden group transition-all hover:shadow-xl hover:border-primary/50 hover:-translate-y-1"
-            >
+          <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 Container -->
+            <div class="project-item bg-background/50 border border-border rounded-2xl overflow-hidden group transition-all hover:shadow-xl hover:border-primary/50 hover:-translate-y-1 cursor-pointer"
+                 data-gallery-images="assets/images/projects/project1/1.jpg,assets/images/projects/project1/2.png,assets/images/projects/project1/3.jpg">
               <div class="relative h-56 bg-border">
                 <img
-                  src="https://via.placeholder.com/400x300.png/0f0f0f/222222?text=Project+Image"
-                  alt="Project 1 Placeholder Image"
+                  src="assets/images/projects/project1/1.jpg"
+                  alt="AI & Authentication Project Thumbnail"
                   class="w-full h-full object-cover"
                 />
+                <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p class="text-white font-bold">View Gallery</p>
+                </div>
               </div>
               <div class="p-6">
                 <h3 class="text-xl font-bold text-text-primary mb-2">
-                  Project Title 1
+                  AI & Authentication Project
                 </h3>
                 <p class="text-text-secondary mb-4 text-sm leading-relaxed">
-                  A brief description of the project, the problem it solves, and
-                  the technologies used.
+                  A showcase of integrating modern AI tools and secure authentication using NextAuth.
                 </p>
-                <div class="flex gap-4 mt-auto">
-                  <a
-                    href="#"
-                    class="w-full text-center px-4 py-2 text-sm font-medium rounded-full border border-primary bg-primary text-background hover:bg-primary/90 transition-colors"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href="#"
-                    class="w-full text-center px-4 py-2 text-sm font-medium rounded-full border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors"
-                  >
-                    Source Code
-                  </a>
-                </div>
               </div>
             </div>
 
-            <!-- Project 2 Placeholder -->
-            <div
-              class="bg-background/50 border border-border rounded-2xl overflow-hidden group transition-all hover:shadow-xl hover:border-primary/50 hover:-translate-y-1"
-            >
+            <!-- Project 2 Container -->
+            <div class="project-item bg-background/50 border border-border rounded-2xl overflow-hidden group transition-all hover:shadow-xl hover:border-primary/50 hover:-translate-y-1 cursor-pointer"
+                 data-gallery-images="assets/images/projects/project2/1.jpg,assets/images/projects/project2/2.svg">
               <div class="relative h-56 bg-border">
                 <img
-                  src="https://via.placeholder.com/400x300.png/0f0f0f/222222?text=Project+Image"
-                  alt="Project 2 Placeholder Image"
+                  src="assets/images/projects/project2/1.jpg"
+                  alt="Design & Components Project Thumbnail"
                   class="w-full h-full object-cover"
                 />
+                <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p class="text-white font-bold">View Gallery</p>
+                </div>
               </div>
               <div class="p-6">
                 <h3 class="text-xl font-bold text-text-primary mb-2">
-                  Project Title 2
+                  Design & Components
                 </h3>
                 <p class="text-text-secondary mb-4 text-sm leading-relaxed">
-                  A brief description of the project, the problem it solves, and
-                  the technologies used.
+                  A project focusing on UI/UX design and component-based architecture with ShadCN/UI.
                 </p>
-                <div class="flex gap-4 mt-auto">
-                  <a
-                    href="#"
-                    class="w-full text-center px-4 py-2 text-sm font-medium rounded-full border border-primary bg-primary text-background hover:bg-primary/90 transition-colors"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href="#"
-                    class="w-full text-center px-4 py-2 text-sm font-medium rounded-full border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors"
-                  >
-                    Source Code
-                  </a>
-                </div>
               </div>
             </div>
 
-            <!-- Project 3 Placeholder -->
-            <div
-              class="bg-background/50 border border-border rounded-2xl overflow-hidden group transition-all hover:shadow-xl hover:border-primary/50 hover:-translate-y-1"
-            >
-              <div class="relative h-56 bg-border">
-                <img
-                  src="https://via.placeholder.com/400x300.png/0f0f0f/222222?text=Project+Image"
-                  alt="Project 3 Placeholder Image"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-text-primary mb-2">
-                  Project Title 3
-                </h3>
-                <p class="text-text-secondary mb-4 text-sm leading-relaxed">
-                  A brief description of the project, the problem it solves, and
-                  the technologies used.
-                </p>
-                <div class="flex gap-4 mt-auto">
-                  <a
-                    href="#"
-                    class="w-full text-center px-4 py-2 text-sm font-medium rounded-full border border-primary bg-primary text-background hover:bg-primary/90 transition-colors"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href="#"
-                    class="w-full text-center px-4 py-2 text-sm font-medium rounded-full border border-border text-text-secondary hover:border-primary hover:text-primary transition-colors"
-                  >
-                    Source Code
-                  </a>
-                </div>
-              </div>
-            </div>
+            <!-- Add more projects here following the same structure -->
+
           </div>
         </div>
       </section>
@@ -978,5 +919,18 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/main.js" defer></script>
+
+    <!-- Custom Lightbox Structure -->
+    <div id="custom-lightbox" class="fixed top-0 left-0 w-full h-full z-[100] items-center justify-center hidden">
+      <div id="lightbox-backdrop" class="absolute top-0 left-0 w-full h-full bg-black/90"></div>
+      <button class="lightbox-close absolute top-4 right-6 text-white text-5xl font-bold hover:text-primary transition-colors z-20">&times;</button>
+      <button class="lightbox-prev absolute top-1/2 left-6 -translate-y-1/2 text-white text-4xl font-bold hover:text-primary transition-colors z-20">&#10094;</button>
+      <button class="lightbox-next absolute top-1/2 right-6 -translate-y-1/2 text-white text-4xl font-bold hover:text-primary transition-colors z-20">&#10095;</button>
+      <div class="relative z-10 max-w-4xl max-h-[80%] p-4">
+        <img id="lightbox-image" src="" alt="Project Image" class="max-w-full max-h-full object-contain" />
+      </div>
+      <div id="lightbox-thumbnails-container" class="absolute bottom-0 left-0 w-full p-4 z-20 text-center"></div>
+    </div>
+
   </body>
 </html>
