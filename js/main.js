@@ -7,7 +7,7 @@ mobileMenuButton.addEventListener('click', () => {
 
 // Typed.js initialization
 var typed = new Typed('#typed-text', {
-    strings: ["Building Modern Web Apps", "Front-end Developer", "Freelancer"],
+    strings: ["Building Modern Web Apps", "Front-end Developer", "Specialized in Next.js"],
     typeSpeed: 50,
     backSpeed: 25,
     loop: true,
@@ -17,6 +17,7 @@ var typed = new Typed('#typed-text', {
 
 // All page logic runs after the DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
+  AOS.init();
   
   // --- Scroll-spy for active navigation links ---
   const sections = document.querySelectorAll("main > section[id], footer[id]");
