@@ -85,12 +85,11 @@
             >Hamza<span class="text-primary">.</span></a
           >
           <nav class="hidden lg:flex items-center space-x-1 mx-4">
-            <a
-              class="px-3 py-2 text-sm font-medium transition-all duration-300 rounded-full text-primary bg-primary-10"
-              href="/"
-              >Home</a
-            >
-            <a
+                          <a
+                            class="px-3 py-2 text-sm font-medium transition-all duration-300 rounded-full text-text-secondary hover:text-primary"
+                            href="#home"
+                            >Home</a
+                          >            <a
               class="px-3 py-2 text-sm font-medium transition-all duration-300 rounded-full text-text-secondary hover:text-primary"
               href="#projects"
               >Projects</a
@@ -166,7 +165,7 @@
             ></a>
             <div class="relative group">
               <button
-                class="p-2 text-text-secondary group-hover:text-primary transition-colors text-lg rounded-full group-hover:bg-primary/10"
+                class="p-2 text-text-secondary group-hover:text-primary transition-colors text-lg rounded-full group-hover:bg-primary-10"
               >
                 •••
               </button>
@@ -212,7 +211,7 @@
           </div>
           <button
             id="mobile-menu-button"
-            class="lg:hidden text-text-secondary focus:outline-none p-2 rounded-full hover:bg-primary/10 hover:text-primary transition-all"
+            class="lg:hidden text-text-secondary focus:outline-none p-2 rounded-full hover:bg-primary-10 hover:text-primary transition-all"
             aria-label="Toggle menu"
           >
             <svg
@@ -240,12 +239,11 @@
           <nav
             class="flex flex-col items-center bg-background/90 backdrop-blur-sm rounded-lg shadow-lg p-4 space-y-2 w-11/12"
           >
-            <a
-              class="px-3 py-2 text-sm font-medium rounded-full text-primary bg-primary-10 w-full text-center"
-              href="/"
-              >Home</a
-            >
-            <a
+                          <a
+                            class="px-3 py-2 text-sm font-medium rounded-full text-text-secondary hover:text-primary w-full text-center"
+                            href="#home"
+                            >Home</a
+                          >            <a
               class="px-3 py-2 text-sm font-medium rounded-full text-text-secondary hover:text-primary w-full text-center"
               href="#projects"
               >Projects</a
@@ -273,6 +271,7 @@
 
     <main>
       <section
+        id="home"
         class="relative min-h-screen flex flex-col justify-center items-center px-4 py-12 sm:py-6 sm:px-6 lg:px-8 overflow-hidden bg-background"
       >
         <!-- Animated Blobs -->
@@ -306,14 +305,14 @@
               </div>
             </div>
             <p
-              class="text-base sm:text-lg max-w-xl text-text-secondary leading-relaxed"
+              class="text-base sm:text-lg max-w-xl mx-auto text-text-secondary leading-relaxed"
             >
               I craft responsive web applications where technologies meet
               creativity. Building exceptional digital experiences with modern
               full stack frameworks.
             </p>
             <div
-              class="flex flex-wrap gap-3 sm:gap-4 justify-center md:justify-start pt-2 sm:pt-4"
+              class="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4"
             >
               <a
                 class="relative inline-flex items-center justify-center px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 overflow-hidden font-medium rounded-full group border border-primary bg-primary text-text-primary hover:scale-[1.03] transform transition-all duration-300 text-sm sm:text-base"
@@ -348,7 +347,7 @@
               <p class="text-xs sm:text-sm text-text-secondary font-medium">
                 Tech I work with:
               </p>
-              <div class="flex flex-wrap gap-2 sm:gap-3">
+              <div class="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3">
                 <div
                   class="flex items-center gap-1.5 sm:gap-2 bg-muted/80 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-lg border border-border hover:bg-background hover:shadow-md transition-all duration-300 group"
                   title="TypeScript"
@@ -521,7 +520,7 @@
               Here are a few projects I've worked on recently.
             </p>
           </div>
-          <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Project 1 Placeholder -->
             <div class="bg-background/50 border border-border rounded-2xl overflow-hidden group transition-all hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
