@@ -118,6 +118,11 @@
             >
             <a
               class="px-3 py-2 text-sm font-medium transition-all duration-300 rounded-full text-text-secondary hover:text-primary"
+              href="#testimonials"
+              >Testimonials</a
+            >
+            <a
+              class="px-3 py-2 text-sm font-medium transition-all duration-300 rounded-full text-text-secondary hover:text-primary"
               href="#contact"
               >Contact</a
             >
@@ -227,6 +232,11 @@
               class="px-3 py-2 text-sm font-medium rounded-full text-text-secondary hover:text-primary w-full text-center"
               href="#about"
               >About</a
+            >
+            <a
+              class="px-3 py-2 text-sm font-medium rounded-full text-text-secondary hover:text-primary w-full text-center"
+              href="#testimonials"
+              >Testimonials</a
             >
             <a
               class="px-3 py-2 text-sm font-medium rounded-full text-text-secondary hover:text-primary w-full text-center"
@@ -843,6 +853,22 @@
               </svg>
               <p class="font-semibold text-text-primary text-sm">REST API</p>
             </div>
+
+            <!-- Framer Motion -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-4 bg-background/50 border border-border rounded-2xl transition-all hover:shadow-xl hover:border-primary/50 hover:-translate-y-1"
+            >
+              <img src="assets/images/Icon.png" class="h-10 w-10" alt="Framer Motion Logo"/>
+              <p class="font-semibold text-text-primary text-sm text-center">Framer Motion / Animation</p>
+            </div>
+
+            <!-- i18n -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-4 bg-background/50 border border-border rounded-2xl transition-all hover:shadow-xl hover:border-primary/50 hover:-translate-y-1"
+            >
+              <img src="assets/images/i18next.avif" class="h-10 w-10" alt="i18n Logo"/>
+              <p class="font-semibold text-text-primary text-sm">i18n / Localization</p>
+            </div>
           </div>
         </div>
       </section>
@@ -893,6 +919,75 @@
         </div>
       </section>
       <!-- End Module 4 -->
+
+      <!-- Module: Testimonials -->
+      <section id="testimonials" class="py-16 md:py-24 bg-background/80" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary">
+              What My <span class="text-primary">Clients Say</span>
+            </h2>
+            <p class="mt-3 md:mt-4 text-base md:text-lg text-text-secondary max-w-2xl mx-auto">
+              I take pride in the positive feedback from people I've worked with.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            
+            <!-- Testimonial Card 1 -->
+            <div class="bg-background/50 border border-border rounded-2xl p-6 flex flex-col">
+              <div class="flex-grow mb-4">
+                <div class="flex text-yellow-400 mb-2">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-text-secondary italic">"Working with Hamza was a fantastic experience. His attention to detail and commitment to quality resulted in a product that exceeded our expectations. Highly recommended!"</p>
+              </div>
+              <div class="flex items-center mt-auto">
+                <img src="assets/images/Mohamed S.jpg" alt="Mohamed El-Safati" class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-primary/50"/>
+                <div>
+                  <h4 class="font-bold text-text-primary">Mohamed El-Safati</h4>
+                  <p class="text-sm text-text-secondary">Full Stack Developer, Novo Inc.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Card 2 -->
+            <div class="bg-background/50 border border-border rounded-2xl p-6 flex flex-col">
+              <div class="flex-grow mb-4">
+                <div class="flex text-yellow-400 mb-2">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-text-secondary italic">"An incredibly talented developer. The communication was seamless, and the final delivery was pixel-perfect. Will definitely collaborate on future projects."</p>
+              </div>
+              <div class="flex items-center mt-auto">
+                <img src="https://placehold.co/48x48/8B5CF6/FFFFFF/png" alt="Client 2" class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-primary/50"/>
+                <div>
+                  <h4 class="font-bold text-text-primary">John Smith</h4>
+                  <p class="text-sm text-text-secondary">Founder, Creative Minds</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Card 3 -->
+            <div class="bg-background/50 border border-border rounded-2xl p-6 flex flex-col">
+              <div class="flex-grow mb-4">
+                <div class="flex text-yellow-400 mb-2">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-text-secondary italic">"The entire process was smooth and professional. Hamza is not just a coder, but a problem solver who brings great ideas to the table. A true asset to any team."</p>
+              </div>
+              <div class="flex items-center mt-auto">
+                <img src="https://placehold.co/48x48/8B5CF6/FFFFFF/png" alt="Client 3" class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-primary/50"/>
+                <div>
+                  <h4 class="font-bold text-text-primary">Emily White</h4>
+                  <p class="text-sm text-text-secondary">Project Manager, Innovate Co.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- End Module: Testimonials -->
     </main>
 
     <!-- Module 5: Contact (Footer) -->
