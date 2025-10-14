@@ -146,29 +146,33 @@
                 ></path></svg
             ></a>
               <a
-                target="_blank"
                 class="p-2 text-text-secondary hover:text-primary transition-colors text-lg rounded-full"
                 href="https://t.me/Hamzaalzoubi"
                 ><i class="fa-brands fa-telegram"></i></a
               >
-            <a
-              target="_blank"
-              class="p-2 text-text-secondary hover:text-primary transition-colors text-lg rounded-full"
-              href="mailto:hamza.alzoubi.business@gmail.com"
-              ><svg
-                stroke="currentColor"
-                fill="currentColor"
-                stroke-width="0"
-                viewBox="0 0 24 24"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
+            <div class="relative email-container">
+              <button
+                aria-label="Copy email to clipboard"
+                title="Copy my email"
+                data-copy-email="hamza.alzoubi.business@gmail.com"
+                class="p-2 text-text-secondary hover:text-primary transition-colors text-lg rounded-full hover:bg-primary/10 email-button"
               >
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path
-                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
-                ></path></svg
-            ></a>
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                  ></path></svg
+              ></button>
+              <span class="email-tooltip absolute -top-8 left-1/2 -translate-x-1/2 text-xs bg-primary text-white px-2 py-1 rounded-md opacity-0 transition-opacity pointer-events-none">Copied!</span>
+            </div>
             <div class="relative group">
               <button
                 class="p-2 text-text-secondary group-hover:text-primary transition-colors text-lg rounded-full group-hover:bg-primary-10"
@@ -869,6 +873,18 @@
               <img src="assets/images/i18next.avif" class="h-10 w-10" alt="i18n Logo"/>
               <p class="font-semibold text-text-primary text-sm">i18n / Localization</p>
             </div>
+
+            <!-- Sanity CMS -->
+            <div
+              class="flex flex-col items-center justify-center gap-3 p-4 bg-background/50 border border-border rounded-2xl transition-all hover:shadow-xl hover:border-primary/50 hover:-translate-y-1"
+            >
+              <img
+                src="assets/images/sanity.png"
+                class="h-12 w-12"
+                alt="Sanity CMS Logo"
+              />
+              <p class="font-semibold text-text-primary text-sm">Sanity CMS</p>
+            </div>
           </div>
         </div>
       </section>
@@ -931,10 +947,10 @@
               I take pride in the positive feedback from people I've worked with.
             </p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="flex justify-center gap-8 max-w-6xl mx-auto">
             
             <!-- Testimonial Card 1 -->
-            <div class="bg-background/50 border border-border rounded-2xl p-6 flex flex-col">
+            <div class="bg-background/50 border border-border rounded-2xl p-6 flex flex-col w-full md:w-1/2 lg:w-1/3">
               <div class="flex-grow mb-4">
                 <div class="flex text-yellow-400 mb-2">
                   <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -950,39 +966,7 @@
               </div>
             </div>
 
-            <!-- Testimonial Card 2 -->
-            <div class="bg-background/50 border border-border rounded-2xl p-6 flex flex-col">
-              <div class="flex-grow mb-4">
-                <div class="flex text-yellow-400 mb-2">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p class="text-text-secondary italic">"An incredibly talented developer. The communication was seamless, and the final delivery was pixel-perfect. Will definitely collaborate on future projects."</p>
-              </div>
-              <div class="flex items-center mt-auto">
-                <img src="https://placehold.co/48x48/8B5CF6/FFFFFF/png" alt="Client 2" class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-primary/50"/>
-                <div>
-                  <h4 class="font-bold text-text-primary">John Smith</h4>
-                  <p class="text-sm text-text-secondary">Founder, Creative Minds</p>
-                </div>
-              </div>
-            </div>
 
-            <!-- Testimonial Card 3 -->
-            <div class="bg-background/50 border border-border rounded-2xl p-6 flex flex-col">
-              <div class="flex-grow mb-4">
-                <div class="flex text-yellow-400 mb-2">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p class="text-text-secondary italic">"The entire process was smooth and professional. Hamza is not just a coder, but a problem solver who brings great ideas to the table. A true asset to any team."</p>
-              </div>
-              <div class="flex items-center mt-auto">
-                <img src="https://placehold.co/48x48/8B5CF6/FFFFFF/png" alt="Client 3" class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-primary/50"/>
-                <div>
-                  <h4 class="font-bold text-text-primary">Emily White</h4>
-                  <p class="text-sm text-text-secondary">Project Manager, Innovate Co.</p>
-                </div>
-              </div>
-            </div>
 
           </div>
         </div>

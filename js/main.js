@@ -167,4 +167,26 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+  // --- Click to Copy Email ---
+  const emailButtons = document.querySelectorAll('[data-copy-email]');
+  emailButtons.forEach(button => {
+    const tooltip = button.parentElement.querySelector('.email-tooltip');
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const email = button.dataset.copyEmail;
+      if (email) {
+        navigator.clipboard.writeText(email).then(() => {
+          // Show tooltip
+          if (tooltip) {
+            tooltip.style.opacity = '1';
+            setTimeout(() => {
+              tooltip.style.opacity = '0';
+            }, 2000); // Hide after 2 seconds
+          }
+        }).catch(err => {
+          console.error('Failed to copy email: ', err);
+        });
+      }
+    });
+  });
 });
